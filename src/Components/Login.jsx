@@ -60,7 +60,10 @@ const Login = () => {
           <button onClick={handleLogin}>LOGIN</button>
         </div>
       ) : (
-        <h1>Invalid login creadentials</h1>
+        <div>
+          <h1>Invalid login creadentials</h1>
+          <button onClick={() => setError(false)}>TRY AGAIN</button>
+        </div>
       )}
     </div>
   );
