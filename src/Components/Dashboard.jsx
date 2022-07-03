@@ -41,7 +41,7 @@ const Dashboard = () => {
           <div>
             <h4>{item.login}</h4>
             <img src={item.avatar_url} alt="avatar" />
-            <a href={item.html_url}>PROFILE</a>
+            <a href={item.html_url} target="_blank">PROFILE</a>
           </div>
         ))}
       </div>
