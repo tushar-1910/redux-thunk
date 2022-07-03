@@ -46,73 +46,82 @@ const Login = () => {
       {!error ? (
         <div>
           <h1>REGISTER</h1>
-          <label>
-            Name :{" "}
-            <input
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />{" "}
-          <label>
-            Email :{" "}
-            <input
-              type="text"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Password :{" "}
-            <input
-              type="text"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Username :{" "}
-            <input
-              type="text"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            mobile :{" "}
-            <input
-              type="text"
-              placeholder="mobile"
-              value={mobile}
-              onChange={(e) => setMobile(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />{" "}
-          <label>
-            Description :{" "}
-            <input
-              type="text"
-              placeholder="Description"
-              value={desc}
-              onChange={(e) => setDesc(e.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <button onClick={handleLogin}>REGISTER</button>
+          <form onSubmit={handleLogin}>
+            <label>
+              Name :{" "}
+              <input
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />{" "}
+            <label>
+              Email :{" "}
+              <input
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />
+            <label>
+              Password :{" "}
+              <input
+                type="text"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />
+            <label>
+              Username :{" "}
+              <input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />
+            <label>
+              mobile :{" "}
+              <input
+                type="number"
+                placeholder="mobile"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />{" "}
+            <label>
+              Description :{" "}
+              <input
+                type="text"
+                placeholder="Description"
+                value={desc}
+                onChange={(e) => setDesc(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <br />
+            <input type="submit" value="REGISTER" />
+          </form>
+
         </div>
       ) : (
         <h1>Registration failed, user already exists</h1>
